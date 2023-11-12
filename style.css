@@ -1,0 +1,111 @@
+header {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+#logo{
+    height: auto;
+    width: 200px;
+}
+/*removed the bullet points for the list because it looked weird*/
+ul {
+    list-style-type: none;
+    padding-left: 5px;
+}
+body {
+background-image: url("https://static.vecteezy.com/system/resources/previews/004/904/919/non_2x/green-leaf-background-illustration-free-vector.jpg");
+background-repeat: no-repeat;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+/*Removed margins and padding so the logo streches across the entire screen*/
+margin: 0;
+padding: 0;
+}
+h3 {
+    color: white;
+    background-color:#897FDB;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 30px;
+    /*added this to make headers stickie*/
+    position: sticky;
+    top: 0;
+    /*this puts the headers on top of other content */
+    z-index: 10;
+    box-shadow: 0px 3px 4px 2px rgba(0, 0, 0, 0.2);
+}
+h4 {
+    text-align: center;
+    background-color: #DB53AB;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 0;
+    color: white;
+    font-size: 20px;
+    margin-top: 0;
+}
+p {
+    margin-top: 0;
+}
+/*used class instead of tag because it was used multiple times*/
+.content{
+    color: black;
+    background-color: white;
+    text-align: center;
+    margin: 20px;
+    padding: 0px;
+    height: 350px;
+    /*this adds the scroll*/
+    overflow: auto;
+    /*drop shadow settings: horizontal offset, vertical offset, blur radius, spread radius*/
+    box-shadow: 10px 10px 10px 2px rgba(0, 0, 0, 0.2);
+    /*added this line to make headers sticky*/
+    position: relative;
+    /*rounded the corners*/
+    border-radius:10px;
+}
+   /*Code for the grid design */
+#grid{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap:10px;
+   margin-top: 25px;
+  
+}
+/* style used for each animal list item */
+.animal-container {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 0;
+    padding-right: 5px;
+}
+/* this is to alternate the image and paragraph for each animal*/
+ul li:nth-child(odd) .animal-container {
+    flex-direction: row;
+}
+
+ul li:nth-child(even) .animal-container {
+    flex-direction: row-reverse;
+}
+
+/*style for animal photos*/
+.animal-image img{
+    width: 200px;
+    height: auto;
+    /*this makes the images circles*/
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+/*style of animal description*/
+.animal-description {
+flex: 1;
+text-align: left;
+padding-left: 15px; 
+padding-right: 8px;
+}
